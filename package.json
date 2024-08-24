@@ -6,7 +6,7 @@
   "license": "",
   "author": "",
   "scripts": {
-    "postinstall": "node scripts/probe.js",
+   
     "config:devices": "node scripts/config-devices.js",
     "serve:dev": "node scripts/version-update.js && webpack serve --config scripts/webpack.serve.js --env development",
     "serve": "node scripts/version-update.js && webpack serve --config scripts/webpack.serve.js --env production",

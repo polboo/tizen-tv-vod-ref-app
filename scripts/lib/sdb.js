@@ -28,7 +28,8 @@ let deviceCapability = {};
  */
 async function sdbExePath() {
   try {
-    return sdbExe ?? (sdbExe = (await require("./tools").sdbTool()).trim());
+    return "sdb";
+   // return sdbExe ?? (sdbExe = (await require("./tools").sdbTool()).trim());
   } catch (error) {
     errorExit(1, tag, [sdbExePath.name], colour.red, "Error", colour.reset, error);
   }
