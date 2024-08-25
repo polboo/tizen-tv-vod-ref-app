@@ -12,7 +12,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: polboo/tizen-webos-sdk:latest
-          options: -v ${{github.workspace}}:src
+          options: -v ${{github.workspace}}:/app
           run: /            
             npm run install
             npm run test
