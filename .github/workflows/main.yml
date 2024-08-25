@@ -1,0 +1,18 @@
+name: Run test suite
+on: push
+
+jobs:
+  run-tests:
+    name: Run Unit run-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Run Docker container to run tests
+        uses: addnab/docker-run-action@v3
+        with:
+          image: polboo/tizen-webos-sdk:latest
+          options: -v ${{github.workspace}}
+          run: /
+            npm run install
+            npm run test
